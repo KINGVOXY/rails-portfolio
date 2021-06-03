@@ -7,8 +7,8 @@ class ContactsController < ApplicationController
         @contact = Contact.new(contact_params)
         if @contact.save
             ContactMailer.contact_mail(@contact).deliver
-            flash[:success] = 'お問い合わせを受け付けました'
-            redirect_to controller: :contacts, action: :new
+            flash[:notice] = 'お問い合わせを受け付けました'
+            redirect_to controller: :contacts, action: :new, notice: 'メッセージが送信されました'
         else
             render :new
         end
@@ -17,6 +17,6 @@ class ContactsController < ApplicationController
     private
 
     def contact_params
-        params.require(:contact).permit(:email,:email,:message)
+        params.require(:contact).permit(:name,:email,:message)
     end
 end
