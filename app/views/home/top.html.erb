@@ -1,0 +1,31 @@
+<h1>Top</h1>
+
+だるろぐ。へようこそ。
+
+<h2>Works</h2>
+
+<h3>DaruShare</h3>
+パスワードをつけて画像を共有するWebアプリケーション。<br>
+Ruby on Railsで制作。<br>
+個人的に使うために制作したため、管理者以外は投稿ができない。<br>
+一般ユーザは実装予定。
+
+<h3>だるろぐ。</h3>
+このサイト。<br>Ruby on Railsで制作。
+
+<h2>News</h2>
+<% @articles.each do |article| %> <!-- 記事を一つずつ取得 -->
+    <ul>
+        <li>
+            <%= article.title %> <!-- タイトル -->
+            <p><%= time_ago_in_words(article.updated_at) %> ago</p> <!-- どれくらい前に更新されたか -->
+            <% unless article.image == "" %> <!-- ヘッダー画像があるとき -->
+                <img src="<%= article.image %>" style="max-width:20vw;min-width:10vw;"> <!-- 画像 -->
+            <% end %>
+            <%= link_to("/blog/#{article.id}/status",{method:"get"}) do %> <!-- 本文ページへ -->
+                show more
+            <% end %>
+
+        </li>
+    </ul>
+<% end %>
