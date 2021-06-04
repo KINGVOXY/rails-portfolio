@@ -1,4 +1,4 @@
-<h1>blog</h1>
+<h1>Manage</h1>
 <% @articles.each do |article| %> <!-- 記事を一つずつ取得 -->
     <ul>
         <li>
@@ -14,6 +14,13 @@
 
             <p><%= truncate(article.content, length: 103) %></p> <!-- 本文 -->
             
+            <%= link_to("/blog/#{article.id}/destroy",{method:"delete"}) do %>
+                <input type="submit" value="delete"> <!-- 記事削除 -->
+            <% end %>
+            <%= link_to("/blog/#{article.id}/edit",{method:"get"}) do %>
+                <input type="submit" value="edit"> <!-- 記事編集 -->
+            <% end %>
+
         </li>
     </ul>
 <% end %>
