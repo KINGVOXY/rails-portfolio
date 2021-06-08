@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def top
-    @articles = Article.order("id DESC").limit(3) # 記事を最新最大3件取ってくる
+    @articles = Article.where.not(image: '').order("id DESC").limit(3) # 記事を最新最大3件取ってくる
     @contact = Contact.new # お問い合わせの作成準備
   end
   
