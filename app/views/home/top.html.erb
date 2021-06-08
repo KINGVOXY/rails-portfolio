@@ -1,31 +1,161 @@
-<h1>Top</h1>
+<main id="home_main">
+    <!-- top -->
+    <section id="top">
+        <!-- header部分 -->
+        <div id="header">
+        <a id="to_top" href="/#top">
+            <svg id="daruo_logo" xmlns="http://www.w3.org/2000/svg" width="249.772" height="78" viewBox="0 0 249.772 78">
+            <text id="Daruo" class="logo_style1" transform="translate(66.772 62)"><tspan x="0" y="0">Daruo</tspan></text>
+            <path id="icon_R_0107" class="logo_style2" d="M135.127,40.482a11.426,11.426,0,0,1,.666,3.848h2.866a14.33,14.33,0,1,0-14.33,14.33c.229,0,.459-.007.688-.014l-.172-2.859c-.172.007-.344.014-.509.014a11.368,11.368,0,0,1-2.895-.373l3.747-10.31Zm-.91-1.949-7.989,3.726,3.016-8.283A11.54,11.54,0,0,1,134.217,38.533Zm-15.684-4.091,3.726,7.989-8.283-3.016A11.54,11.54,0,0,1,118.533,34.442Zm-5.667,9.887a11.368,11.368,0,0,1,.373-2.895l8.29,3.016-8,3.726A11.426,11.426,0,0,1,112.866,44.33Zm6.549,10.353a11.54,11.54,0,0,1-4.972-4.557l7.989-3.726Zm1.068-21.151a11.437,11.437,0,0,1,6.742-.294l-3.016,8.29Zm29.727,4.349H160.87V35.015H150.209a4.293,4.293,0,0,0-4.17,3.253l-2.049,8.211h-17.6l3.038,50.154h27.054l3.038-50.154H146.942l1.877-7.509A1.431,1.431,0,0,1,150.209,37.881ZM129.431,49.345h13.835l-2.214,8.87H129.976Zm24.36,44.422H132.125l-1.992-32.829h25.643Zm2.694-44.422-.537,8.87H144.011l2.214-8.87Z" transform="translate(-110 -30)"/>
+            </svg></a>
+            
+            <!--<img id="daruo_logo" src="/assets/logo.svg">-->
+            <input type="checkbox" id="menu_ham">
+            <label for="menu_ham"><img id="menu_logo" height="100%" width="100%" src="/assets/menu_ham.svg"></label>
+            <nav id="menu_nav">
+                <div><a href="#about">about</a></div>
+                <div><a href="#works">works</a></div>
+                <div><a href="#blog">blog</a></div>
+                <div><a href="#contact">contact</a></div>
+            </nav>
+        </div>
 
-だるろぐ。へようこそ。
+        <div class="yoko">
+            <!-- 画像 -->
+            <img class="daruo_img" src="/assets/top_me.jpg">
+            <!-- ひとこと -->
+            <div><p class="align_center">こんにちは、だるおです。</p></div>
+        </div>
 
-<h2>Works</h2>
+        <!-- やじるし -->
+        <img class="arrow_down" src="/assets/yajirushi.svg">
+    
+    </section>
+    <!--<div id="white_bar"></div>-->
 
-<h3>DaruShare</h3>
-パスワードをつけて画像を共有するWebアプリケーション。<br>
-Ruby on Railsで制作。<br>
-個人的に使うために制作したため、管理者以外は投稿ができない。<br>
-一般ユーザは実装予定。
+    <!-- about -->
+    <section id="about">
+        <h2>about</h2>
+        <div class="yoko">
+            <!-- 画像 -->
+            <div class="first_box"><img class="daruo_img" src="/assets/about_me.png"></div>
+            <!-- ひとこと -->
+            <div class="last_box">
+                <p>
+                    こんにちは、進野 太一です。<br>
+                    皆からは「だるお」というあだ名で呼ばれています。<br>
+                    近畿大学 理工学部情報学科 システムコース3年生です。<br>
+                    WebサービスやIoT開発に興味があります。<br>
+                    使用言語はJavaやRuby、Python、JavaScriptなど。<br>
+                    主にRuby on RailsやDenoを用いて開発しています。<br>
+                    趣味はRaspberryPiで遊んだり、絵を描いたりすることです。
+                </p>
 
-<h3>だるろぐ。</h3>
-このサイト。<br>Ruby on Railsで制作。
+                <div class="link_icons">
+                    <a href="https://github.com/KINGVOXY" target="_blank" rel="noopener noreferrer"><img src="/assets/github.svg"></a>
+                    <a href="https://twitter.com/DaruoUni" target="_blank" rel="noopener noreferrer"><img src="/assets/twitter.svg"></a>
+                </div>
+            </div>
+            
 
-<h2>News</h2>
-<% @articles.each do |article| %> <!-- 記事を一つずつ取得 -->
-    <ul>
-        <li>
-            <%= article.title %> <!-- タイトル -->
-            <p><%= time_ago_in_words(article.updated_at) %> ago</p> <!-- どれくらい前に更新されたか -->
-            <% unless article.image == "" %> <!-- ヘッダー画像があるとき -->
-                <img src="<%= article.image %>" style="max-width:20vw;min-width:10vw;"> <!-- 画像 -->
+        </div>
+    </section>
+
+    <!-- works -->
+    <section id="works">
+        <h2>works</h2>
+        <div class="work">
+            <h3>Daru Share</h3>
+            <div>
+                <a href="https://darushare.f5.si"><img src="/assets/ds_screen.png"></a>
+                <span>URL: <a href="https://darushare.f5.si">https://darushare.f5.si</a></span>
+            </div>
+
+            <p class="home_p_res">
+                アップロードした画像をパスワードを使って共有できるWebサービスです。<br>
+                Discordのアップロード容量を超える画像を、手軽に共有できるものとして製作しました。<br>
+                当初、完全に自分用に製作したため、一般ユーザはアップロードできませんが、今後実装する予定です。
+            </p>
+            <p><span>使用したもの</span><br>
+        
+                Ruby on Rails 5.2.3<br>
+                Nginx<br>
+                Raspberry Pi 4B
+            </p>
+        </div>
+        
+    </section>
+
+    <section>
+        <div class="work w2">
+            <h3>Portfolio Site</h3>
+            <img src="/assets/ps_screen.png">
+            <p class="home_p_res">
+                このポートフォリオサイトです。<br>
+                2年前に製作したブログを一新したいと考え、新たに製作しました。
+            </p>
+            <p><span>使用したもの</span><br>
+        
+                Ruby on Rails 5.2.3<br>
+                Nginx<br>
+                さくらVPS
+            </p>
+        </div>
+
+    </section>
+
+    <!-- blog -->
+    <section id="blog">
+        <h2>blog</h2>
+        <div class="blog_box">
+
+            <ul>
+            <% @articles.each do |article| %> <!-- 記事を一つずつ取得 -->
+                    <li>
+                    <%= link_to("/blog/#{article.id}/status",{method:"get"}) do %> <!-- 本文ページへ -->
+                        
+                            <% unless article.image == "" %> <!-- ヘッダー画像があるとき -->
+                                <img src="<%= article.image %>"> <!-- 画像 -->
+                            <% else %>
+                                <img src="/assets/no_image.svg"> <!-- 画像 -->
+                            <% end %>
+
+                            <h3><%= truncate(article.title, length: 13) %></h3> <!-- タイトル -->
+
+                    <% end %>
+                    </li>
+            <% end %>        
+            </ul>
+
+            <a href="/blog" id="show_more">show more</a>
+
+        </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact">
+        <h2>contact</h2>
+        <div class="contact_box">
+            <p>なにかコメント等ありましたら、下記のフォームからご連絡ください。</p>
+
+            <%= form_for @contact do |f| %>
+            <div class="c_forms">
+                <div class="c_form1">
+                    <label>名前<%= f.text_field :name, class: 'form_control' %></label>
+                    
+
+                    <label>メールアドレス<%= f.text_field :email, class: 'form_control' %></label>
+                </div>
+
+                <div class="c_form2">
+                    <%= f.label :message, 'メッセージ' %><br>
+
+                    <%= f.text_area :message, class: 'form_control f_area' %>
+                </div>
+            </div>
+
+                <%= f.submit '送信', class: 'submit' %>
             <% end %>
-            <%= link_to("/blog/#{article.id}/status",{method:"get"}) do %> <!-- 本文ページへ -->
-                show more
-            <% end %>
-
-        </li>
-    </ul>
-<% end %>
+        </div>
+    </section>
+</main>
