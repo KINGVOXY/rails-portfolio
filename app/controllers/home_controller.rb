@@ -15,8 +15,8 @@ class HomeController < ApplicationController
           ContactMailer.contact_mail(@contact).deliver
           flash[:notice] = 'お問い合わせを受け付けました'
           redirect_to controller: :home, action: :top, notice: 'メッセージが送信されました'
-      else
-          render :new
+        else
+          redirect_to controller: :home, action: :top, notice: '入力が正しくありません'
       end
   end
 
