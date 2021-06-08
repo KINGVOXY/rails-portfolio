@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(255,255,255,0);
+      }
+
+      .cls-2 {
+        fill: #444;
+      }
+    </style>
+  </defs>
+  <g id="グループ_21" data-name="グループ 21" transform="translate(-346 -18)">
+    <rect id="長方形_20" data-name="長方形 20" class="cls-1" width="50" height="50" rx="5" transform="translate(346 18)"/>
+    <g id="グループ_20" data-name="グループ 20" transform="translate(92 -83)">
+      <rect id="長方形_21" data-name="長方形 21" class="cls-2" width="38" height="5" rx="2" transform="translate(260 110)"/>
+      <rect id="長方形_21-2" data-name="長方形 21" class="cls-2" width="38" height="5" rx="2" transform="translate(260 124)"/>
+      <rect id="長方形_21-3" data-name="長方形 21" class="cls-2" width="38" height="5" rx="2" transform="translate(260 138)"/>
+    </g>
+  </g>
+</svg>

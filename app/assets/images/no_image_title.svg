@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="300" viewBox="0 0 700 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4d4d4d;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 100px;
+        font-family: UDDigiKyokashoNP-R, UD Digi Kyokasho NP-R;
+        letter-spacing: 0.03em;
+      }
+    </style>
+  </defs>
+  <g transform="translate(-616 -1183)">
+    <rect class="cls-1" width="700" height="300" transform="translate(616 1183)"/>
+    <text class="cls-2" transform="translate(960 1363)"><tspan x="-271.389" y="0">NO IMAGE</tspan></text>
+  </g>
+</svg>
