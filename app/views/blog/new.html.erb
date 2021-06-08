@@ -1,3 +1,8 @@
+<head>
+    <% content_for :head do %>
+        <meta name="robots" content="noindex,nofollow,noarchive" />
+    <% end %>
+</head>
 <h1>new page</h1>
 
 <%= form_tag('/blog/create', method: :post) do %> <!-- submitしたらpostでとばすよ -->

@@ -1,3 +1,9 @@
+<head>
+    <% content_for :head do %>
+        <meta name="robots" content="noindex,nofollow,noarchive" />
+    <% end %>
+</head>
+
 <h1>edit page</h1>
 
 <%= form_tag("/blog/#{@article.id}/update", method: :put) do %> <!-- submitしたらpostでとばすよ -->
