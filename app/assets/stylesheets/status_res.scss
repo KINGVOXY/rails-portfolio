@@ -1,0 +1,30 @@
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+}
+
+// 480px以下に適用されるCSS（スマホ用
+@media screen and (max-width: 480px) {
+    
+    .status_title_set {
+        margin-top: 100px;
+        margin-bottom: 2vh;
+        font-size: 1.2em;
+    }
+
+    #status_article {
+        width: 100%;
+        .status_header {
+            img {
+                width: 100%;
+            }
+        }
+
+        .status_content {
+            #p_status {
+                width: 80%;
+                margin: 0 auto;
+                line-height: 1.5em;
+            }
+        }
+    }
+} 

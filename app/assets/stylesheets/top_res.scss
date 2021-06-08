@@ -1,0 +1,291 @@
+input[type="submit"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+}
+
+// 480px以下に適用されるCSS（スマホ用
+@media screen and (max-width: 480px) {
+
+#header {
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    max-height: 70px;
+
+    position: fixed;
+    background: #fff;
+    align-items: center;
+    justify-content: space-between;
+
+    #daruo_logo {
+        position: absolute;
+        margin: 0;
+        height: 60%;
+        width: min-content;
+        transform: translateX(10%);
+    }
+
+    label {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top:0;
+        
+    }
+
+    #menu_logo {
+    }
+
+    nav {
+        display: none;
+    }
+
+}
+/*
+#white_bar {
+    z-index: 1;
+    width: 100%;
+    height: 20px;
+    min-height: 20px;
+    position: sticky;
+    top: 100px;
+    background-color: red;
+    //background: -moz-linear-gradient(0, #fff, rgba(255,255,255,0)); 
+    //background: -webkit-linear-gradient(0, #fff, rgba(255,255,255,0)); 
+
+}*/
+
+body {
+
+}
+
+section > * {
+    width: 100%;
+}
+
+#home_main {
+    //background-color: red;
+
+    p {
+        br {
+            display: block;
+            content: "";
+            margin: 15px 0;
+        }
+    }
+    
+    #top {
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        .yoko {
+            margin-top: 10vh;
+            display: block;
+            width: inherit;
+            //height: 90%;
+            img {
+                width: 100vw;
+                height: 100vw;
+            }
+            div {
+                width: 100%;
+                justify-content: space-between;
+                p {
+                    -webkit-transform: translateY(50%);
+                    transform: translateY(50%);
+                }
+            }
+        }
+        .arrow_down {
+            bottom: 70px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+    }
+
+    section > h2 {
+        width: 100vw;
+        text-align: center;
+        font-size: 3em;
+        height: fit-content;
+    }
+
+    // about
+
+    #about {
+        height: max-content;
+        .yoko {
+            margin-top: 3vh;
+            display: block;
+            width: inherit;
+            
+            
+            //height: 90%;
+            .first_box {
+                width: 100%;
+                height: fit-content;
+                
+                img {
+                    width: 100vw;
+                    height: 50vw;
+                    object-position: top;
+                }
+            }
+            .last_box {
+                margin: 0 auto;
+                margin-top: 20vh;
+                
+                p {
+                    width: 95vw;
+                    line-height: 2em;
+                }
+
+                .link_icons {
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+
+    #works {
+        margin-top: 10vh;
+        height: max-content;
+    }
+
+    .w2 {
+        margin-top: 10vh;
+    }
+
+    .work {
+        height: max-content;
+        h3 {
+            font-size: 1.4em;
+        }
+
+        
+        img {
+            margin-top: 4vh;
+            width: 100%;
+        }
+
+        p {
+            margin-top: 10vh;
+            width: 95%;
+            line-height: 2em;
+            text-align: left;
+            span {
+                margin-bottom: 1em;
+            }
+            br {
+                display: block;
+                content: "";
+                margin: 10px 0;
+            }
+
+        }
+    }
+
+    #blog {
+        min-height:fit-content;
+        height: max-content;
+
+        .blog_box {
+            ul {
+                text-align: center;
+                display: block;
+                li {
+                    margin-bottom: 10vh;
+                    a {
+                        width: 40vw;
+                        text-align: center;
+                        img {
+                            width: 40vw;
+                            height: 40vw;
+                        }
+                        h3 {
+                            display: flex;
+                            word-break: break-all;
+                            text-align: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+
+            #show_more {
+                width: fit-content;
+                text-align: center;
+                border-bottom: solid 1.5px #777;
+                font-size: 1em;
+                margin-top: 0;
+            }
+        }
+        
+    }
+
+    #contact {
+        margin: 10vh;
+        display: block;
+        height: max-content;
+        
+        .contact_box {
+            margin-top: 5vh;
+            p {
+                width: 95%;
+                margin-bottom: 0vh;
+            }
+            
+            .new_contact {
+                margin-top: 10vh;
+                width: 60%;
+                height: max-content;
+                .c_forms {
+                    display: block;
+                    margin: 0;
+                    height: max-content;
+                    div {
+                        margin: 0;
+
+                    }
+                    .c_form1 {
+                        width: 100%;
+                        margin: 0;
+                        justify-content: center;
+                        text-align: center;
+                        label {
+                            margin-top: 5vh;
+                        }
+
+                    }
+                    .c_form2 {
+                        margin-top: 5vh;
+                        text-align: center;
+                        textarea {
+                            height: 36vw;
+                        }
+                    }
+
+                    textarea {
+                        font-family: "UDD";
+                        color: #333;
+                        font-size: 0.9em;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+
+}
+
+}

@@ -1,6 +1,392 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1{
-    color: red;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "UDD";
+    color: #444;
+    //scroll-behavior: smooth;
 }
+
+#home_main {
+    width: 100%;
+    height: 100vh;
+    display: flex; // スクロールでみょんっとするため
+    flex-direction: column;
+    align-items: center;
+    //scroll-snap-type: y proximity;
+    //overflow-y: scroll;
+    
+}
+
+section {
+    scroll-snap-align: start;
+    flex: none;
+    position: relative;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        opacity: 0.5;
+        font-size: 6em;
+    }
+}
+
+section > * {
+    width: 80%;
+}
+
+// top
+
+#top {
+    // background-color: cadetblue;
+    height: 100%;
+    width: 100%;
+    min-height: 660px;
+    
+    .yoko {
+        height: 60%;
+    }
+
+    .daruo_img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+    #to_top {
+        height: 25%;
+        width: fit-content;
+        //transform: translateX(-15%);
+    }
+}
+
+.arrow_down {
+    position: absolute;
+    bottom: 50px;
+    width: 26px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // background-color: bisque;
+    
+    height: 25vh;
+
+
+    #daruo_logo {
+        width: auto;
+        height: 100%;
+
+    }
+
+    input {
+        display: none;
+    }
+    
+    label {
+        display: none;
+    }
+
+    nav {
+        margin: 0;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        div {
+            margin: 0 5%;
+            width: fit-content;
+            a {
+                display: inline;
+                padding: 5px 7px;
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+}
+// top&about
+
+.align_center {
+    text-align: center;
+}
+
+.yoko {
+    justify-content: center;
+
+    * {
+        width: 50%;
+    }
+    
+    display: flex;
+
+    div {
+        p {
+            width: 80%;
+            line-height: 2.5em;
+        }
+    }
+}
+
+.yoko > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+// about
+#about {
+    height: 100%;
+    width: 100%;
+    min-height: 800px;
+
+    .yoko {
+        margin-top: 4%;
+        height: 45%;
+        .first_box {
+            height: 100%;
+        }
+
+        .daruo_img {
+            object-fit: cover;
+            width: 45%;
+            height: 100%;
+        }
+
+        .last_box {
+            justify-content: space-between;
+            width: max-content;
+        }
+
+        p {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 50px;    
+        }
+
+        .link_icons {
+            width: 100%;
+            //display: flex;
+            a {
+                margin-right: 2vw;
+                width: fit-content;
+                img {
+                    opacity: 0.6;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+
+}
+
+//works
+#works {
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    
+}
+
+.work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    h3 {
+        font-size: 2em;
+    }
+    
+    div {
+        span {
+            display: block;
+            font-size: 0.9em;
+        }
+        a {
+            color: inherit;
+        }
+    }
+
+    img {
+        object-fit: cover;
+        width: 30%;
+        box-shadow: 0 0 6px rgb(211, 211, 211);
+    }
+
+    p {
+        span {
+            display: block;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            font-weight: bold;
+        }
+    }
+}
+
+.w2 {
+    height: 100%;
+    min-height: 700px;
+}
+
+// blog
+#blog {
+    height: 100%;
+    width: 100%;
+    min-height: 750px;
+}
+
+.blog_box {
+    margin-top: 5vh;
+    width: inherit;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    
+    #show_more {
+        margin-top: 15vh;
+        font-size: 1.5em;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    
+    ul {
+        padding-left: 0;
+        justify-content: space-around;
+        display: flex;
+        list-style: none;
+        width: 65%;
+        height: fit-content;
+        li {
+                a {
+            //margin: 0 2vw;
+                img {
+                    width: 12vw;
+                    height: 12vw;
+                    object-fit: cover;
+                }
+
+                h3 {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}
+
+#contact {
+    width: 100%;
+    height: 100%;
+    min-height: max-content;
+}
+
+.contact_box {
+    margin-top: 0;
+    width: inherit;
+    height: 70%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content:flex-start;
+
+    p {
+        margin-bottom: 15vh;
+    }
+
+}
+
+.new_contact {
+    width: 40%;
+    height: 20%;
+    min-height: 130px;
+    align-items: center;
+    .c_forms {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        div {
+            margin: 0 2vw;
+        }
+        .c_form1 {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-right: 5vw;
+            text-align: left;
+            
+        }
+        
+        .c_form2 {
+            height: 100%;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    .submit {
+        margin: 10vh;
+
+        display       : inline-block;
+        border-radius : 10%;
+        font-size     : 14pt;
+        font-family: "UDD";
+        text-align    : center;
+        cursor        : pointer;
+        padding       : 12px 24px;
+        background    : #707070;
+        border    : 2px solid #707070;
+        color         : #ffffff;
+        line-height   : 1em;
+        transition    : .3s;
+        &:hover {
+            color         : #707070;
+            background    : #ffffff;
+        }
+    }
+}
+
+.form_control {
+    height: 80%;
+    width: 100%; /*親要素いっぱい広げる*/
+    padding: 5px 15px; /*ボックスを大きくする*/
+    font-size: 16px;
+    border-radius: 5px; /*ボックス角の丸み*/
+    border: 3px solid #707070; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+    &:focus {
+        border: 3px solid #eeca53 !important;
+        outline: 0;
+    }
+}
+
+.f_area {
+    resize: none;
+    height: 100%;
+    width: 100%;
+}
+// ##################################################
