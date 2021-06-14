@@ -2,6 +2,7 @@
     font-size: 16px;
 
     p {
+        font-size: 0.8em;
     }
 
     br {
@@ -24,9 +25,33 @@
         border-bottom: solid 1.5px #777;
     }
 
-    h3, h4, h5, h6 {
+    h3, h4 {
         margin-top: 5vh;
         font-size: 18px;
         color: #333;
     }
+
+    h5, h6 {
+        font-weight: normal;
+        margin-top: 5vh;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .prettyprint {
+        padding: 0.5em 0.7em;
+        font-family: "HGN-R";
+        font-size: 0.8em;
+        background-color: #222;
+        ol{
+            white-space: pre-wrap; /* 折り返し  */
+        }
+    }
+
+    .linenums > li {
+        list-style-type: decimal;
+        line-height: 1.2em;
+        font-weight: normal;
+    }
+
 }
