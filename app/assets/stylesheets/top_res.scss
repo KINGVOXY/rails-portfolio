@@ -30,13 +30,14 @@ input[type="submit"] {
     }
 
     label {
-        display: inline-block;
+        //display: inline-block;
+        display: none;//実装時消す
         position: absolute;
         right: 0;
         top:0;
         
     }
-
+    
     #menu_logo {
     }
 
