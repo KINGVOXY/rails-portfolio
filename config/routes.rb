@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   put     '/blog/:id/update',   to: 'blog#update'                # 記事更新
   delete  '/blog/:id/destroy',  to: 'blog#destroy'               # 記事削除
 
+  get '*path', controller: 'application', action: 'render_404'   # 404 not found
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
