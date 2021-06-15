@@ -1,3 +1,9 @@
+<% content_for(:meta_tags) do %>
+    <meta property="og:title" content="Portfolio Site - Daruo" />
+    <meta property="og:description" content="こんにちは、だるおです。" />
+
+    <meta property="og:image" content="/assets/ogp.png" />
+<% end %>
 <main id="home_main">
     <!-- top -->
     <section id="top">
@@ -10,8 +16,8 @@
             </svg></a>
             
             <!--<img id="daruo_logo" src="/assets/logo.svg">-->
-            <input type="checkbox" id="menu_ham">
             <label for="menu_ham"><img id="menu_logo" height="100%" width="100%" src="/assets/menu_ham.svg"></label>
+            <input type="checkbox" id="menu_ham">
             <nav id="menu_nav">
                 <div><a href="#about">about</a></div>
                 <div><a href="#works">works</a></div>
@@ -24,7 +30,7 @@
             <!-- 画像 -->
             <img class="daruo_img" src="/assets/top_me.jpg">
             <!-- ひとこと -->
-            <div><p class="align_center">こんにちは、だるおです。</p></div>
+            <div><p class="align_center">こんにちは、<strong style="font-weight: inherit;">だるお</strong>です。</p></div>
         </div>
 
         <!-- やじるし -->
@@ -42,7 +48,7 @@
             <!-- ひとこと -->
             <div class="last_box">
                 <p>
-                    こんにちは、進野 太一です。<br>
+                    こんにちは、<b style="font-weight: normal;">進野 太一</b>です。<br>
                     皆からは「だるお」というあだ名で呼ばれています。<br>
                     近畿大学 理工学部情報学科 システムコース3年生です。<br>
                     WebサービスやIoT開発に興味があります。<br>
@@ -76,7 +82,7 @@
                 Discordのアップロード容量を超える画像を、手軽に共有できるものとして製作しました。<br>
                 当初、完全に自分用に製作したため、一般ユーザはアップロードできませんが、今後実装する予定です。
             </p>
-            <p><span>使用したもの</span><br>
+            <p class="madeby"><span>使用したもの</span><br>
         
                 Ruby on Rails 5.2.3<br>
                 Nginx<br>
@@ -94,7 +100,7 @@
                 このポートフォリオサイトです。<br>
                 2年前に製作したブログを一新したいと考え、新たに製作しました。
             </p>
-            <p><span>使用したもの</span><br>
+            <p class="madeby"><span>使用したもの</span><br>
         
                 Ruby on Rails 5.2.3<br>
                 Nginx<br>
@@ -141,16 +147,16 @@
             <%= form_for @contact do |f| %>
             <div class="c_forms">
                 <div class="c_form1">
-                    <label>名前<%= f.text_field :name, class: 'form_control' %></label>
+                    <label>名前<%= f.text_field :name, required: true, class: 'form_control' %></label>
                     
 
-                    <label>メールアドレス<%= f.text_field :email, class: 'form_control' %></label>
+                    <label>メールアドレス<%= f.text_field :email, required: true, class: 'form_control' %></label>
                 </div>
 
                 <div class="c_form2">
                     <%= f.label :message, 'メッセージ' %><br>
 
-                    <%= f.text_area :message, class: 'form_control f_area' %>
+                    <%= f.text_area :message, required: true, class: 'form_control f_area' %>
                 </div>
             </div>
 
