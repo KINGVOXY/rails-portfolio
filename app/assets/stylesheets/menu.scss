@@ -1,0 +1,47 @@
+// 480px以下に適用されるCSS（スマホ用
+@media screen and (max-width: 480px) {
+    #header {
+
+        nav {
+            position: absolute;
+            display: block;
+            
+            top: 60px;
+            left: 0%;
+            
+            height: max-content;
+            width: 100vw;
+
+            background: rgba($color: #fff, $alpha: 0.9);
+    
+            div {
+    
+                margin: 5vh auto;
+                a {
+                    font-size: 22px;
+                }
+            }
+    
+            transform: translateY(-200vh);
+            transition: opacity 0.3s, transform 0s 0.3s;
+            
+            opacity: 0;
+        }
+        #menu_ham:checked + nav {
+            transition: opacity 0.2s, transform 0s;
+            opacity: 1;
+            
+            display: block;
+            transform: translateY(0%);
+        }
+    }
+}
+
+@keyframes fadein {
+	from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
