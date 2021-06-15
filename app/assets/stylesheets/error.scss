@@ -1,0 +1,46 @@
+#err {
+    display: flex;
+    width: 100%;
+    //height: 100vh;
+    position: relative;
+    display: flex; // スクロールでみょんっとするため
+    flex-direction: column;
+    align-items: center;
+
+    #err_content {
+        text-align: center;
+        #err_code {
+            text-align: inherit;
+            margin: auto;
+            margin-top: 10vh;
+            font-size: 6em;
+        }
+
+        #wr_err_mes {
+            margin-bottom: 10vh;
+            #err_mes {
+                text-align: inherit;
+                font-size: 0.8em;
+                color: #777;
+            }
+        }
+        
+        a {
+            text-align: inherit;
+            text-decoration: none;
+            color: #ff9300;
+        }
+    }
+}
+
+// 480px以下に適用されるCSS（スマホ用
+@media screen and (max-width: 480px) {
+    #err {
+        #err_content {
+            #err_code {
+                margin-top: calc(10vh + 60px);
+                margin-top: -webkit-calc(10vh + 60px);
+            }
+        }
+    }
+}
