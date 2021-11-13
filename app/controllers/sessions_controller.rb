@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to "/blog" # リダイレクト
     else
       flash[:danger] = 'メールアドレス、パスワードのどちらかまたは両方の入力に誤りがあります。' # エラーメッセージ
-      render '/sessions/new' # loginページ再読み込み
+      render '/bg9naw4' # loginページ再読み込み
     end
   end
 

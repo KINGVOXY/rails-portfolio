@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get     '/blog',              to: 'blog#index'                 # ブログ一覧
   get     '/blog/:id/status',   to: 'blog#status'                # 記事詳細
 
-  get     '/login',             to: 'sessions#new'               # ログインページ
-  post    '/login',             to: 'sessions#create'            # ログイン処理
+  get     '/bg9naw4',             to: 'sessions#new'               # ログインページ
+  post    '/bg9naw4',             to: 'sessions#create'            # ログイン処理
   delete  '/logout',            to: 'sessions#destroy'           # ログアウト
 
   get     '/blog/manage',       to: 'blog#manage'                # ブログ管理画面

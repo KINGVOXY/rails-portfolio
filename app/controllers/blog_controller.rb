@@ -48,7 +48,7 @@ class BlogController < ApplicationController
 
   private
   def logged_in_user
-    redirect_to '/login' unless logged_in? # loginしていなかったらloginへ
+    redirect_to '/blog' unless logged_in? # loginしていなかったらblogへ
   end
 
 end
